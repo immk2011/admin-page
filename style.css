@@ -14,6 +14,8 @@ body {
     display: grid;
     grid-template-columns: 250px 3fr;
     grid-template-rows: 200px 3fr;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* Sidebar */
@@ -121,9 +123,24 @@ i {
 .main-container {
     background-color: rgb(233, 229, 227);
     display: grid;
-    grid-template-columns: 3fr 300px;
+    grid-template-columns: 3fr 350px;
     grid-template-rows: 1fr 1fr;
     border: 20px solid transparent;
+    overflow: auto;
+
+}
+
+.projects .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    overflow: auto;
+}
+
+.projects {
+    grid-row: 1 / 3;
 }
 
 .card {
@@ -133,4 +150,33 @@ i {
     border-radius: 8px;
     padding: 20px;
     border-left: 10px solid rgb(88, 175, 247);
+}
+
+.announcements {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.ann, .trend{
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.announcement + .announcement {
+    border-top: 1px solid rgb(202, 202, 202);
+}
+
+.announcement {
+    padding: 1rem;
+}
+
+.trending {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.trend-card {
+    padding: 10px;
 }
