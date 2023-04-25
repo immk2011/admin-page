@@ -125,9 +125,9 @@ i {
     display: grid;
     grid-template-columns: 3fr 350px;
     grid-template-rows: 1fr 1fr;
-    border: 20px solid transparent;
+    outline: 20px solid transparent;
     overflow: auto;
-
+    padding: 20px;
 }
 
 .projects .cards {
@@ -149,6 +149,7 @@ i {
     flex-direction: column;
     border-radius: 8px;
     padding: 20px;
+    margin-top: 10px;
     border-left: 10px solid rgb(88, 175, 247);
 }
 
@@ -158,10 +159,11 @@ i {
 }
 
 .ann, .trend{
-    margin: 20px;
+    margin: 10px;
+    margin-left: 30px;
     padding: 20px;
     background-color: white;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .announcement + .announcement {
@@ -179,4 +181,21 @@ i {
 
 .trend-card {
     padding: 10px;
+}
+
+.main-container>div>h3 {
+    padding: 10px;
+}
+
+.ann-title, .tren-title {
+    margin-left: 20px;
+}
+
+.side-words .word {
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+
+.side-words .word:hover{
+   color:rgb(196, 225, 248);
 }
